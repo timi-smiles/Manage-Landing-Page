@@ -1,0 +1,767 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bright-red: hsl(12, 88%, 59%);
+    --dark-blue: hsl(228, 39%, 23%);
+    --dark-grayish-blue: hsl(227, 12%, 61%);
+    --very-dark-blue: hsl(233, 12%, 13%);
+    --very-pale-red: hsl(13, 100%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    font-size: 16px;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-style: normal;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.overlay {
+    background: linear-gradient(to bottom, transparent, #000);
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    z-index: 150;
+    bottom: 0;
+}
+
+html {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    overflow-x: hidden;
+}
+
+.header-container {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.mobile-nav {
+    width: 90%;
+    height: 280px;
+    padding: 40px 0;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--very-light-gray);
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.mobile-nav a {
+    width: 100%;
+    color: var(--very-dark-blue);
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+}
+
+.desktop-nav, .nav-desktop-btn {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.hero-illustration {
+    overflow: hidden;
+}
+
+.hero-illustration, .hero-container .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-illustration::before, .functionalities-container::before {
+    content: "";
+    background: url(../images/bg-tablet-pattern.svg);
+    width: 80%;
+    height: 900px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: -100px;
+    top: -100px;
+    overflow: hidden;
+}
+
+.hero {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    z-index: 100;
+}
+
+.hero-container .content-container {
+    padding: 20px 40px;
+}
+
+.hero-container .content-container h1 {
+    text-align: center;
+    color: var(--dark-blue);
+    z-index: 100;
+}
+
+.hero-container .content-container p {
+    text-align: center;
+    color: var(--dark-grayish-blue);
+    margin: 20px 0;
+    font-weight: 300;
+    line-height: 1.7;
+    z-index: 100;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+.cta-btn {
+    width: 140px;
+    height: 45px;
+    background-color: var(--bright-red);
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: var(--very-light-gray);
+    font-weight: 400;
+    font-family: "Be Vietnam Pro", sans-serif;
+    cursor: pointer; 
+    z-index: 100;
+}
+
+.cta-btn:hover {
+    opacity: 0.7;
+}
+
+
+.functionalities-container {
+    padding: 60px 30px;
+    position: relative;
+}
+
+.functionalities-container::before {
+    top: -380px;
+    right: -250px;
+    z-index: -1;
+}
+
+.functionalities-container h2 {
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.functionalities-container h2, .functionalities-container > p {
+    text-align: center;
+}
+
+.functionalities-container p {
+    color: var(--dark-grayish-blue);
+    line-height: 1.7;
+    margin: 20px 0 40px;
+    padding: 0 10px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--very-pale-red);
+    height: 40px;
+    gap: 20px;
+    width: 110%;
+    border-radius: 25px 0 0 25px;
+    overflow-x: hidden;
+}
+
+.number-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--very-light-gray);
+    background-color: var(--bright-red);
+    height: 40px;
+    width: 60px;
+    border-radius: 25px;
+}
+
+.title-container h3 {
+    color: var(--dark-blue);
+    width: 75%;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-container h2 {
+    margin-bottom: 100px;
+    color: var(--dark-blue);
+    font-weight: 800;
+}
+
+.reviews-slider {
+    width: 100vw;
+    height: auto;
+    margin: auto;
+}
+
+.reviews-slider .slider-track {
+    display: flex;
+    gap: 20px;
+    width: calc(100% * 4);
+}
+
+.review {
+    background-color: var(--very-light-gray);
+    padding: 70px 30px 30px;
+    width: 80%;
+    margin: 0 40px;
+    position: relative;
+}
+
+.author-img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.author, .review p {
+    text-align: center;
+}
+
+.author {
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.review p {
+    color: var(--dark-grayish-blue);
+    line-height: 1.7;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.slider-num {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--bright-red);
+    border-radius: 50%;
+}
+
+.slider-num.active {
+    background-color: var(--bright-red);
+}
+
+.cta-section {
+    margin-top: 50px;
+    background-color: var(--bright-red);
+    height: 350px;
+    padding: 40px;
+    position: relative;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    background: url(../images/bg-simplify-section-mobile.svg);
+    background-repeat: no-repeat;
+    left: 0;
+    top: 20px;
+    z-index: 1;
+}
+
+.cta-container .content-container {
+    position: relative;
+    z-index: 10;
+}
+
+.cta-section h2 {
+    color: var(--very-light-gray);
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-container {
+    display: flex;
+    position: relative;
+    z-index: 10;
+}
+
+.cta-section button {
+    width: 140px;
+    margin: 10px auto;
+    height: 40px;
+    background-color: var(--very-light-gray);
+    color: var(--bright-red);
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cta-section button:hover  {
+    color: #f25f3a38;
+}
+
+footer {
+    background-color: var(--very-dark-blue);
+}
+
+.footer-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    gap: 10px;
+}
+
+.newsletter input {
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.input-email_container {
+    width: 70%;
+}
+
+.input-email_container input[type="email"] {
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: var(--bright-red);
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.success {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-left: 10px;
+    color: var(--very-light-gray);
+}
+
+.newsletter input[type="submit"] {
+    width: 80px;
+    background-color: var(--bright-red);
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.newsletter input[type="submit"]:hover {
+    background-color: #ed9e8a;
+}
+
+.nav_footer {
+    margin: 40px 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_footer nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_footer nav a {
+    text-decoration: none;
+    color: var(--very-light-gray);
+    padding: 10px 0;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.nav_footer nav a:hover {
+    color: var(--bright-red);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.fa-brands {
+    color: var(--very-light-gray);
+    font-size: 2rem;
+}
+
+.fa-brands:hover {
+    color: var(--bright-red);
+}
+
+.logo-footer {
+    width: 120px;
+    margin: 30px auto;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: var(--dark-grayish-blue)
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-nav_container {
+        display: none;
+    }
+
+    .functionalities-container::before {
+        width: 700px;
+        right: -400px;
+        top: -600px;
+    }
+
+    .desktop-nav {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .desktop-nav a {
+        text-decoration: none;
+        color: var(--very-dark-blue);
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .desktop-nav a:hover {
+        color: var(--dark-grayish-blue);
+    }
+
+    .nav-desktop-btn {
+        display: flex;
+        background-color: var(--bright-red);
+        color: var(--very-light-gray);
+        border: none;
+        outline: none;
+        width: 120px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        font-family: "Be Vietnam Pro", sans-serif;
+    }
+
+    .hero-illustration::before {
+        height: 1000px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header-container {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 1400px;
+        margin: auto;
+        overflow-x: hidden;
+    }
+
+    .hero-container .content-container {
+        margin-left: 60px;
+    }
+
+    .hero-container .content-container, .hero-illustration {
+        width: 50%;
+    }
+
+    .hero-container {
+        position: relative;
+    }
+
+    .hero-illustration::before {
+        background-size: cover;
+        top: -300px;
+        right: -200px;
+        width: 800px;
+        height: 800px;
+    }
+
+    .hero-container .content-container {
+        align-items: flex-start;
+    }
+
+    .hero-container .content-container h1, .hero-container .content-container p {
+        text-align: start;
+        position: relative;
+        width: 70%;
+    }
+
+    .functionalities-container {
+        margin-top: 60px;
+        display: flex;
+        width: 90%;
+        margin: auto;
+        max-width: 1300px;
+    }
+
+    .functionalities-container::before {
+        display: none;
+    }
+
+    .functionalities-container .content-container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        position: relative;
+    }
+
+    .functionalities-container .content-container h2 {
+        text-align: start;
+    }
+
+    .functionalities-container p {
+        padding: 0;
+    }
+
+    .functionalities-container .content-container p {
+        width: 70%;
+        text-align: start;
+    }
+
+    .functionalities-container > .content-container::before {
+        content: "";
+        position: absolute;
+        width: 900px;
+        height: 600px;
+        background: url(../images/bg-tablet-pattern.svg);
+        background-repeat: no-repeat !important;
+        left: -500px;
+        background-size: cover;
+        z-index: -1;
+        bottom: -200px;
+        overflow-x: hidden;
+    }
+
+    .title-container {
+        background-color: transparent;
+        position: relative;
+    }
+
+    .functionalities-cards {
+        width: 90%;
+        padding-left: 100px;
+    }
+
+
+    .number-card {
+        position: absolute;
+        left: -80px;
+    }
+
+    .card .content-container p {
+        width: 90%;
+    }
+
+    .reviews-slider {
+        max-width: 1300px;
+        width: 100vw;
+        height: auto;
+        margin: auto auto 60px;
+    }
+    
+    .reviews-slider .slider-track {
+        display: flex;
+        gap: 20px;
+        animation: scroll 10s linear infinite;
+        -webkit-animation: scroll 10s linear infinite;
+        width: calc(600px * 4);
+        cursor: pointer;
+        padding-left: 60px;
+    }
+    
+    .slider-track:hover {
+        animation-play-state: paused;
+    }
+    
+    .review {
+        background-color: var(--very-light-gray);
+        padding: 70px 30px 30px;
+        width: 600px;
+        height: 250px;
+        position: relative;
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(calc(-300px*4));
+            transform: translateX(calc(-300px*4));
+        }
+    }
+
+    .pagination {
+        display: none;
+    }
+
+    .cta-section {
+        align-items: flex-end;
+        height: 250px;
+    }
+    
+    .cta-section::before {
+        background: url(../images/bg-simplify-section-desktop.svg);
+        height: 250px;
+        top: 0;
+    }
+
+        .cta-container {
+        max-width: 1300px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cta-section .content-container h2 {
+        width: 60%;
+        text-align: start;
+    }
+
+    .cta-section .btn-container {
+        width: 40%;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    .cta-section .btn-container button {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .footer-container {
+        flex-direction: row-reverse;
+        position: relative;
+        align-items: flex-start;
+        max-width: 1300px;
+        width: 90%;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .company-social {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        width: 20%;
+    }
+
+    .logo-footer {
+        margin: 0 0 30px;
+        margin-top: 8px;
+    }
+
+    .social-icons {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .fa-brands {
+        font-size: 1.2rem;
+    }
+
+    .nav_footer {
+        width: 40%;
+        margin: 0;
+        padding-right: 50px;
+    }
+
+    .newsletter {
+        width: 30%;
+        margin: 0;
+        margin-top: 8px;
+         margin-left: 100px;
+    }
+    
+    .copyright {
+        position: absolute;
+        bottom: 60px;
+        right: 40px;
+    }
+}
